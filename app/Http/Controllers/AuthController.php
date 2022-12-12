@@ -12,19 +12,22 @@ class AuthController extends Controller
 
     function login(Request $request)
     {
-
+        
         if($request->method() == "GET")
+
     {
         return view("login");
+
     }
 
 
+
         $email = $request->input('email');
-        $email = $request->input('password');
-        $pengguna = Pengguna::query()
-            ->where('email', $email)
+        $password = $request->input('password');
+        $pengguna = Pengguna::where('email', $email)
             ->first();
-        if ($pengguna == null) {
+       
+                    if ($pengguna == null) {
             return redirect()
             ->back()
             ->withErrors([
@@ -49,7 +52,7 @@ class AuthController extends Controller
     function logout(Request $request)
     {
         session()->flush();
-        return redirect()->route("login");
+        return redirect()->route("logout")->with('success', 'Selamat! Anda berhasil logout');
     }
 
 }
