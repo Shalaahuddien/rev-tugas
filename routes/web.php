@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +25,5 @@ Route::any("/logout", [AuthController::class, "logout"])
 Route::any("/register", [AuthController::class, "register"])
     ->name('register')
     ->middleware([""]);
+
+Route::get("/home", [HomeController::class, "index"]);

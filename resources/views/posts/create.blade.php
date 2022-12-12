@@ -31,8 +31,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Post">
+                                <label class="font-weight-bold">Product</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Nama Product">
                             
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -42,8 +42,20 @@
                                 @enderror
                             </div>
 
+                            <!-- <div class="form-group">
+                                <label class="font-weight-bold">Price</label>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Harganya"> -->
+                            
+                                <!-- error message untuk title -->
+                                <!-- @error('title')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div> -->
+
                             <div class="form-group">
-                                <label class="font-weight-bold">KONTEN</label>
+                                <label class="font-weight-bold">Deskripsi</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
                             
                                 <!-- error message untuk content -->

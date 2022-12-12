@@ -17,10 +17,23 @@ class PenggunaSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\Pengguna::query()->create([
+        \App\Models\Pengguna::query()
+        ->create([
             "nama" => "Fulan",
             "email" => "fulan@gmail.com",
             "password" => Hash::make("fulan123")
+
+            // "nama" => "Daffa",
+            // "email" => "udin@gmail.com",
+            // "password" => Hash::make("udin123")
+
         ]);
+
+        // ([
+        //     "nama" => "Daffa",
+        //     "email" => "udin@gmail.com",
+        //     "password" => Hash::make("udin123")
+        // ]);
+
     }
 }
